@@ -1,2 +1,56 @@
 .main-slider
     margin-top: 60px
+    &__content
+        margin-top: 60px
+    &__buttons-group
+        .button:first-child
+            margin-right: 30px
+.main-slider-item
+    width: 530px !important
+    height: 394px
+    box-shadow: 6px 6px 30px 4px rgba(0, 0, 0, 0.3)
+    background-color: $color-white
+    &__button a
+        color: $color-white
+        background-color: $color-accent
+        padding: 20px 25px
+        font-size: 24px
+    img
+        margin-bottom: 70px
+.slick-slide
+    width: 530px !important
+    height: 394px
+    transition: transform .4s
+    position: relative
+
+.slick-slide:after
+    content:''
+    position: absolute
+    z-index: 2
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(0,0,0,.1)
+    transition: transform .4s
+
+.slick-slide
+    transform: scale(0.7)  translate(640px)
+
+.slick-slide.slick-center + .slick-slide
+    transform: scale(0.8) translate(-250px)
+    z-index: 10
+
+.slick-slide.slick-center + .slick-slide + .slick-slide
+    transform: scale(0.7)  translate(-640px)
+    z-index: 5
+
+.slick-slide.slick-active
+    transform: scale(0.8) translate(250px)
+
+.slick-slide.slick-center
+    transform: scale(1)
+    z-index: 30
+
+.slick-center:after
+    display: none

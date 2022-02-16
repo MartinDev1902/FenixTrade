@@ -1,19 +1,21 @@
 import $ from 'jquery';
 import { appearence } from './animations/appearence';
+import { header } from './parts/header';
+import 'slick-carousel';
 
 $(document).ready(function(){
     appearence();
-    
-    $('#menu-language-switcher-desktop').click(function(e){
-        $(this).find('.sub-menu').toggleClass('active-switcher')
-    });
-
-    $('#burgerButton').click(function(){
-        $(this).toggleClass('active-burger');
-        $('#mobileNavigation').toggleClass('active-mobile-navigation');
-    })
-
-    $('.menu-item-has-children').click(function(){
-        $(this).toggleClass('active-item')
-    })
+    header();
+    $('#mainSlider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        centerMode: true,
+        variableWidth: true,
+        infinite: true,
+        focusOnSelect: true,
+        cssEase: 'linear',
+        touchMove: true,
+      });
 })

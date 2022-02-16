@@ -13,6 +13,17 @@
             padding-bottom: 30px
             display: block
             font-size: 15px
+            &::after
+                content: ''
+                width: 0
+                height: 1px
+                background-color: $color-black
+                display: block
+                transform: translateY(10px)
+                transition: all 0.3s ease
+            &:hover 
+                &::after
+                    width: 100%
         .sub-menu
             display: none
             position: absolute
@@ -22,6 +33,7 @@
             opacity: 0
             transition: all 0.3s ease
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1)
+            z-index: 10
             .menu-item
                 margin-right: 0
                 display: inline-block
@@ -34,6 +46,8 @@
                     &:hover
                         background-color: $color-accent 
                         color: $color-white
+                    &::after
+                        display: none
         &__parent
             display: flex
             align-items: center
@@ -69,6 +83,7 @@
         position: absolute
         top: 110%
         background-color: $color-white
+        z-index: 10
         .menu-item 
             a
                 padding: 10px
@@ -102,6 +117,7 @@
     +min-screen($breakpoint-md)
         display: none !important
 .mobile-navigation
+    z-index: 10
     display: none
     background-color: $color-white
     width: 100%
