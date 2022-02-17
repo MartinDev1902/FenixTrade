@@ -3,5 +3,7 @@
 <?php get_template_part('parts/fingertips'); ?>
 <?php get_template_part('parts/trust'); ?>
 <?php get_template_part('parts/way-to-profit'); ?>
+<?php get_template_part('parts/bitcoin'); ?>
+<?php get_template_part('parts/learning'); ?>
 <?php get_footer(); ?> 
     
