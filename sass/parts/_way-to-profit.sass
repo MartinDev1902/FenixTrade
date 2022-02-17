@@ -1,0 +1,24 @@
+.timeline-item
+    margin-bottom: 50px
+    &__step-icon
+        margin-right: 25px
+        margin-top: -10px
+    &__step-count
+        margin-right: 25px
+        min-width: 40px
+        min-height: 40px
+        border: 1px solid $color-accent
+        border-radius: 50%
+        background-color: $color-white
+        &::after
+            content: ''
+            background-color: $color-accent
+            width: 1px
+            height: 150px
+            display: block
+            position: absolute
+            top: 100%
+    &:last-child
+        .timeline-item__step-count
+            &::after
+                display: none
